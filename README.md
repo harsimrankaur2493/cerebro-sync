@@ -21,11 +21,9 @@ The Task Manager is a web application that helps users manage tasks effectively 
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/yourusername/task-manager.git
+   npm i
+   npm start
 ```
-2. Start the application
 
-  ```bash
-   git clone https://github.com/yourusername/task-manager.git
-```
 
 Access the application: Open http://localhost:3000 in your browser to start managing tasks.
