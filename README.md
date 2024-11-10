@@ -22,9 +22,10 @@ The Task Manager is a web application that helps users manage tasks effectively 
    ```bash
    git clone https://github.com/yourusername/task-manager.git
 ```
+2. Start the application
 
-```bash
-npm start
+  ```bash
+   git clone https://github.com/yourusername/task-manager.git
 ```
 
 Access the application: Open http://localhost:3000 in your browser to start managing tasks.
