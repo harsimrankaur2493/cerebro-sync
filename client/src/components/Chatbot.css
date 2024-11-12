@@ -1,0 +1,114 @@
+/* General Chatbot container */
+.chatbot {
+  width: 350px;
+  height: 500px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 20px;
+}
+
+/* Chat History Container */
+.chat-history {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Individual message style */
+.message {
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Styling for user messages */
+.message.user {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end;
+  border-top-right-radius: 0;
+}
+
+/* Styling for bot messages */
+.message.bot {
+  background-color: #f1f1f1;
+  color: #333;
+  align-self: flex-start;
+  border-top-left-radius: 0;
+}
+
+/* Input field */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+/* Input field focus styling */
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Send button */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Button disabled state */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+/* Add some padding between the bot's reply messages */
+.chatbot-replies {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Update message styling */
+.message.bot {
+  background-color: #f1f1f1;
+  color: #333;
+  align-self: flex-start;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.message.bot strong {
+  font-weight: bold;  /* Bold text inside the message */
+}
