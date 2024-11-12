@@ -1,4 +1,4 @@
-# cerebro-sync
+# CerebroSync
 a MERN stack based task-manager
 
 ## Overview
