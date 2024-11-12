@@ -3,6 +3,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import morgan from "morgan";
+import path from "path"; // Add this import
+import { fileURLToPath } from "url"; 
 import { errorHandler, routeNotFound } from "./middlewares/errorMiddleware.js";
 import routes from "./routes/index.js";
 import { dbConnection } from "./utils/index.js";
@@ -16,6 +18,10 @@ dbConnection();
 const PORT = process.env.PORT || 5000;
 
 const app = express();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const distPath = path.resolve(__dirname, '../frontend/dist');
 
 // Set up CORS
 app.use(
@@ -104,6 +110,10 @@ app.post("/chat", async (req, res) => {
     console.error('Error in chat endpoint:', error);
     res.status(500).json({ error: 'Sorry, something went wrong. Please try again later.' });
   }
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(distPath, 'index.html'));
 });
 
 // Fallback routes for handling errors
