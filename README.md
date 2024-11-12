@@ -1,5 +1,5 @@
 # CerebroSync
-a MERN stack based task-manager
+A MERN stack based task-manager.
 
 ## Overview
 The Task Manager is a web application that helps users manage tasks effectively by providing features to add, edit, delete, and organize tasks. It’s designed to be simple, user-friendly, and responsive.
